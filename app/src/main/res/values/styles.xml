@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="Title" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Medium</item>
+	</style>
+
+	<style name="WalletCard" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">88dp</item>
+		<item name="android:layout_marginBottom">12dp</item>
+		<item name="android:background">@drawable/box_r24_800</item>
+	</style>
+
+	<style name="WalletCardIcon" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">48dp</item>
+		<item name="android:layout_height">48dp</item>
+		<item name="android:layout_marginStart">20dp</item>
+
+	</style>
+
+	<style name="WalletCardName" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginStart">12dp</item>
+		<item name="android:layout_marginTop">3dp</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Bold</item>
+	</style>
+
+	<style name="HistoryCardName" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginStart">12dp</item>
+		<item name="android:layout_marginTop">3dp</item>
+		<item name="android:textSize">18dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Bold</item>
+	</style>
+
+	<style name="WalletCardValue" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginBottom">3dp</item>
+		<item name="android:textSize">14dp</item>
+		<item name="android:textColor">@color/gray300</item>
+		<item name="android:textAppearance">@style/Typography.Regular</item>
+	</style>
+
+	<style name="historyCardValue" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginBottom">3dp</item>
+		<item name="android:textSize">15dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Medium</item>
+	</style>
+
+	<style name="WalletCardHoldingDollar" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">4dp</item>
+		<item name="android:layout_marginEnd">20dp</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Bold</item>
+	</style>
+
+	<style name="WalletCardHoldingDollaGap" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginEnd">20dp</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:textAppearance">@style/Typography.SemiBold</item>
+	</style>
+
+	<style name="BasicLayout">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:padding">20dp</item>
+	</style>
+
+	<style name="NFTBottomList" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">56dp</item>
+		<item name="android:background">@drawable/border_bottom</item>
+		<item name="android:stateListAnimator">@null</item>
+		<item name="android:gravity">center|start</item>
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textAppearance">@style/Typography.Medium</item>
+	</style>
+</resources>

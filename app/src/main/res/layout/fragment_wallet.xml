@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<variable
+			name="viewModel"
+			type="com.looktab.tinji.feature.MainViewModel" />
+
+	</data>
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginBottom="50dp"
+		android:background="@color/black">
+
+		<androidx.appcompat.widget.LinearLayoutCompat
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<androidx.appcompat.widget.LinearLayoutCompat
+				android:layout_width="240dp"
+				android:layout_height="240dp"
+				android:layout_gravity="center"
+				android:layout_marginTop="18dp"
+				android:background="@drawable/ic_wallet_bg"
+				android:orientation="vertical">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					style="@style/Typography.Bold"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginTop="80dp"
+					android:text="@{viewModel.apt}"
+					android:textColor="@color/white"
+					android:textSize="48dp" />
+
+
+				<androidx.appcompat.widget.AppCompatTextView
+					style="@style/Typography.Regular"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="APT"
+					android:textColor="@color/white"
+					android:textSize="18dp" />
+
+			</androidx.appcompat.widget.LinearLayoutCompat>
+
+			<TextView
+				android:id="@+id/date"
+				style="@style/WalletCardValue"
+				android:layout_marginBottom="12dp"
+				android:text="Jan 28, 2023"
+				android:layout_marginTop="20dp"
+				android:layout_marginHorizontal="20dp"
+				tools:text="Oct 28, 2023" />
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rvWalletCard"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="20dp"
+				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+				tools:itemCount="4"
+				android:layout_marginBottom="50dp"
+				tools:listitem="@layout/item_wallet_card" />
+
+		</androidx.appcompat.widget.LinearLayoutCompat>
+
+	</androidx.core.widget.NestedScrollView>
+
+</layout>

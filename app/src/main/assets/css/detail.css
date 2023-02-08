@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0F0F0F;
+
+}
+
+.image_container {
+    width: 100%;
+}
+
+.background {
+    width: 100%;
+}
+
+.pre_icon{
+    position: absolute;
+    top: 75px;
+    left: 27px;
+    width: 18.39px;
+    height: 14.14px;
+}
+
+.content_container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #191A1E;
+    border-bottom: 1px solid #171717;
+}
+
+.content_title_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.congestion_box {
+    width: 67px;
+    height: 22px;
+    background: #151D1A;
+    border: 1px solid #32443D;
+    border-radius: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.congestion_circle {
+    width: 8px;
+    height: 8px;
+    background: #3BB98C;
+    border-radius: 100%;
+    margin-right: 4px;
+}
+
+.congestion_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: -0.02em;
+    color: #3BB98C;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.content_detail_container {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_detail {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #272727;
+}
+
+.content_detail:last-child {
+    border-bottom: none;
+}
+
+.detail_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.detail_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.line {
+    width: 100%;
+    height: 8px;
+    background: #000;
+}
+
+.review_container {
+    width: 100%;
+    background: #191A1E;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+}
+
+.review_check_box {
+    display: flex;
+}
+
+.review_check_box p {
+    margin-left: 8px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    display: inline-block;
+    border: 1px solid #CCCCCC;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: #272727;
+}
+
+input[id="check1"]:checked+label {
+    background:white;
+    border: none;
+}
+
+input[id="check1"]:checked+label::after {
+    content: '✔';
+    font-size: 14px;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    top: 0;
+}
+
+.review_tab {
+    margin-top: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #777777;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #777777;
+}
+
+.tab_select {
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.review_image_box{
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review_image_row{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.review_image_row img{
+    border-radius: 20px;
+
+}
+
+.row_image{
+    width: 100%;
+}
+
+
+_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.review_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #292C32;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.review_card_box{
+    margin: 10px 0;
+}
+.review_card_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.review_card_image {
+    display: grid;
+    grid-template-columns: repeat(3, 94px);
+    grid-gap: 1px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.review_image {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+}
+
+.review_card_content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #CCCCCC;
+    margin-bottom: 12px;
+}
+
+.review_card_date {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+}
+
+.checkin_bar {
+    margin-top: 10px;
+    width: 100%;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+}
+
+.checkin_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(95.15deg, #79E6EE 18.69%, #FFFC57 85.22%);
+}
+
+.checkin_button a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.checkin_button p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+
+.hide{
+    display: none;
+}

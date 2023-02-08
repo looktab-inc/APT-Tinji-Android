@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<data>
+
+		<variable
+			name="item"
+			type="com.looktab.tinji.feature.model.Nft" />
+
+	</data>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:cardCornerRadius="48dp"
+		app:cardPreventCornerOverlap="false"
+		app:cardUseCompatPadding="true">
+
+		<com.looktab.tinji.customview.ProductRoundImageView
+			android:id="@+id/item_image"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			imageUrl="@{item.image}"
+			android:scaleType="centerCrop" />
+
+		<com.looktab.tinji.customview.ProductRoundImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="1dp"
+			android:scaleType="fitXY"
+			android:src="@drawable/card_airdrop" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:layout_marginBottom="32dp"
+			android:orientation="vertical">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:layout_width="wrap_content"
+				android:layout_height="36dp"
+				android:layout_gravity="center"
+				android:background="@drawable/distance"
+				android:drawableLeft="@drawable/ic_geo"
+				android:drawablePadding="4dp"
+				android:gravity="center"
+				android:paddingHorizontal="10dp"
+				android:paddingVertical="8dp"
+				android:text="1km away"
+				android:textColor="@color/white" />
+		</LinearLayout>
+		<FrameLayout
+			android:id="@+id/left_overlay"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/gradation_blue">
+
+			<ImageView
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_gravity="center"
+				android:src="@drawable/icon_unlike" />
+
+		</FrameLayout>
+
+		<FrameLayout
+			android:id="@+id/right_overlay"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/gradation_red">
+
+			<ImageView
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_gravity="center"
+				android:src="@drawable/icon_like" />
+		</FrameLayout>
+
+	</androidx.cardview.widget.CardView>
+</layout>

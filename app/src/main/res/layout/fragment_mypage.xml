@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<variable
+			name="viewModel"
+			type="com.looktab.tinji.feature.MainViewModel" />
+
+	</data>
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/black">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="60dp"
+			android:paddingTop="24dp">
+
+			<androidx.appcompat.widget.LinearLayoutCompat
+				android:id="@+id/card_spent"
+				android:layout_width="0dp"
+				android:layout_height="200dp"
+				android:layout_marginEnd="9dp"
+				android:layout_weight="1"
+				android:background="@drawable/card_mypage_spent"
+				android:orientation="vertical"
+				android:padding="18dp"
+				app:layout_constraintDimensionRatio="1.6:1.9"
+				app:layout_constraintEnd_toStartOf="@id/card_benefit"
+				app:layout_constraintHorizontal_chainStyle="packed"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<ImageView
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:src="@drawable/ic_mypage_spent" />
+
+				<TextView
+					style="@style/Typography.Regular"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="bottom"
+					android:text="@string/Spent"
+					android:textColor="@color/white80"
+					android:textSize="20dp" />
+
+				<TextView
+					style="@style/Typography.Bold"
+					android:layout_width="wrap_content"
+					android:layout_height="24dp"
+					android:gravity="center"
+					android:text="$2938"
+					android:textColor="@color/white"
+					android:textSize="20dp" />
+
+				<TextView
+					style="@style/Typography.Regular"
+					android:layout_width="wrap_content"
+					android:layout_height="24dp"
+					android:gravity="center"
+					android:text="@string/month"
+					android:textColor="@color/white80"
+					android:textSize="20dp" />
+			</androidx.appcompat.widget.LinearLayoutCompat>
+
+			<androidx.appcompat.widget.LinearLayoutCompat
+				android:id="@+id/card_benefit"
+				android:layout_width="0dp"
+				android:layout_height="200dp"
+				android:layout_marginStart="9dp"
+				android:layout_weight="1"
+				android:background="@drawable/card_mypage_benefit"
+				android:orientation="vertical"
+				android:padding="18dp"
+				app:layout_constraintDimensionRatio="1.6:1.9"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_chainStyle="packed"
+				app:layout_constraintStart_toEndOf="@id/card_spent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<ImageView
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:src="@drawable/ic_mypage_benefit" />
+
+				<TextView
+					style="@style/Typography.Regular"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="bottom"
+					android:text="@string/benefit"
+					android:textColor="@color/white80"
+					android:textSize="20dp" />
+
+				<TextView
+					style="@style/Typography.Bold"
+					android:layout_width="wrap_content"
+					android:layout_height="24dp"
+					android:gravity="center"
+					android:text="$2938"
+					android:textColor="@color/white"
+					android:textSize="20dp" />
+
+				<TextView
+					style="@style/Typography.Regular"
+					android:layout_width="wrap_content"
+					android:layout_height="24dp"
+					android:gravity="center"
+					android:text="@string/month"
+					android:textColor="@color/white80"
+					android:textSize="20dp" />
+			</androidx.appcompat.widget.LinearLayoutCompat>
+
+			<androidx.appcompat.widget.LinearLayoutCompat
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="20dp"
+				android:background="@drawable/bg_half_round_36"
+				android:orientation="vertical"
+				android:paddingBottom="34dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/card_spent">
+
+				<androidx.appcompat.widget.LinearLayoutCompat
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:layout_margin="20dp"
+					android:background="@drawable/box_r20_800"
+					android:orientation="horizontal"
+					android:weightSum="2">
+
+					<TextView
+						style="@style/Typography.Medium"
+						historyType="@{!viewModel.reviewHistory}"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center"
+						android:layout_weight="1"
+						android:background="@drawable/box_r20_600"
+						android:gravity="center"
+						android:onClick="@{() -> viewModel.setReviewHistory(false)}"
+						android:text="@string/TransactionHistory"
+						android:textColor="@color/white80"
+						android:textSize="16dp" />
+
+					<TextView
+						style="@style/Typography.SemiBold"
+						historyType="@{viewModel.reviewHistory}"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center"
+						android:layout_weight="1"
+						android:background="@drawable/box_r20_600"
+						android:gravity="center"
+						android:onClick="@{() -> viewModel.setReviewHistory(true)}"
+						android:text="@string/ReviewHistory"
+						android:textColor="@color/white80"
+						android:textSize="16dp" />
+				</androidx.appcompat.widget.LinearLayoutCompat>
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rvHistory"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="20dp"
+					android:layout_marginEnd="20dp"
+					app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+					tools:itemCount="10"
+					tools:listitem="@layout/item_history" />
+			</androidx.appcompat.widget.LinearLayoutCompat>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</layout>

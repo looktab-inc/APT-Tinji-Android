@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="@color/white"
+		app:cardCornerRadius="16dp"
+		app:cardElevation="3dp">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/text"
+			style="@style/Typography.Regular"
+			android:layout_width="wrap_content"
+			android:layout_height="42dp"
+			android:layout_marginHorizontal="16dp"
+			android:drawableLeft="@drawable/ic_solana"
+			android:drawablePadding="4dp"
+			android:gravity="center"
+			android:text="0.002sol burned down."
+			android:textColor="@android:color/black"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.cardview.widget.CardView>
+</layout>

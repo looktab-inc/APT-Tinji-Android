@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<variable
+			name="viewModel"
+			type="com.looktab.tinji.feature.MainViewModel" />
+	</data>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/gray200"
+			android:orientation="vertical"
+			tools:context=".feature.nft.NftDetailsActivity">
+
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<ImageView
+					android:id="@+id/nftImage"
+					imageUrl="@{viewModel.detailNFT.image}"
+					android:layout_width="match_parent"
+					android:layout_height="500dp"
+					android:background="@color/gray200"
+					android:scaleType="centerCrop" />
+
+				<ImageView
+					android:id="@+id/btnBack"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:layout_margin="8dp"
+					android:src="@drawable/ic_back" />
+
+			</FrameLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="100dp"
+				android:background="@color/gray900"
+				android:orientation="vertical"
+				android:paddingHorizontal="20dp"
+				android:paddingVertical="24dp">
+
+				<TextView
+					android:id="@+id/nftName"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{viewModel.detailNFT.title}"
+					android:textColor="@color/white"
+					android:textSize="28dp"
+					android:textStyle="bold"
+					tools:text="Subway" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/border_bottom"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/nftShop"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="16dp"
+						android:drawableLeft="@drawable/ic_shop"
+						android:drawablePadding="8dp"
+						android:text="69 Rue des Ayres, 33000"
+						android:textColor="@color/white"
+						android:textSize="16dp" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="28dp"
+						android:drawablePadding="8dp"
+						android:text="www.subway.com"
+						android:textColor="#619AFF" />
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="28dp"
+						android:layout_marginTop="4dp"
+						android:src="@drawable/ic_detail" />
+				</LinearLayout>
+
+
+				<TextView
+					android:id="@+id/nftDescription"
+					style="@style/NFTBottomList"
+					android:layout_marginTop="16dp"
+					android:drawableLeft="@drawable/ic_memo"
+					android:drawablePadding="8dp"
+					tools:text="Special coupon for you" />
+
+				<TextView
+					android:id="@+id/nftSale"
+					style="@style/NFTBottomList"
+					android:layout_marginTop="16dp"
+					android:drawableLeft="@drawable/ic_sale"
+					android:drawablePadding="8dp"
+					android:text="3% Sale"
+					android:textColor="@color/green"
+					tools:text="10%" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</layout>

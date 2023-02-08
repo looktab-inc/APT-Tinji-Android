@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<variable
+			name="viewModel"
+			type="com.looktab.tinji.feature.model.Token" />
+
+	</data>
+
+	<androidx.constraintlayout.widget.ConstraintLayout style="@style/WalletCard">
+
+		<com.looktab.tinji.customview.ProductRoundImageView10
+			android:id="@+id/icon"
+			style="@style/WalletCardIcon"
+			imageUrl="@{viewModel.icon}"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:src="@drawable/ic_nft_off" />
+
+		<TextView
+			android:id="@+id/name"
+			style="@style/WalletCardName"
+			android:text="@{viewModel.name}"
+			app:layout_constraintStart_toEndOf="@id/icon"
+			app:layout_constraintTop_toTopOf="@id/icon"
+			tools:text="Solana" />
+
+		<TextView
+			style="@style/WalletCardValue"
+			android:text="@{viewModel.getTokenHolding()}"
+			app:layout_constraintBottom_toBottomOf="@id/icon"
+			app:layout_constraintStart_toStartOf="@id/name"
+			tools:text="3,293849 SOL" />
+
+		<TextView
+			style="@style/WalletCardHoldingDollaGap"
+			walletGapTextColor="@{viewModel.dollarGap}"
+			android:text="@{viewModel.getHoldingDollarGap()}"
+			android:textColor="@color/red"
+			app:layout_constraintTop_toTopOf="@id/icon"
+			app:layout_constraintBottom_toBottomOf="@id/icon"
+			app:layout_constraintEnd_toEndOf="parent"
+			tools:text="+$0.41" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

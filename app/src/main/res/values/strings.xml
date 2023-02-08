@@ -1,3 +1,38 @@
 <resources>
 	<string name="app_name">Tinji</string>
+	<!-- Strings used for fragments for navigation -->
+	<string name="name">Name</string>
+	<string name="mint">Mint</string>
+	<string name="mint_account">Mint Account: %1$s</string>
+	<string name="nft_creators">Creators</string>
+	<string name="nft_royalty_splits">Royalty Splits</string>
+	<string name="nft_overview">Overview</string>
+	<string name="nft_sales_status">Sales Status</string>
+	<string name="nft_royalty_fee_basis">Royalty Fee Basis</string>
+	<string name="nft_metadata_status">Metadata Status</string>
+	<string name="nft_summary">Summary</string>
+	<string name="nft_wallet_id">Wallet ID</string>
+	<string name="nft_update_authority">Update Authority</string>
+	<string name="nft_token_address">Token Address</string>
+	<string name="nft_owner_address">Owner Address</string>
+	<string name="no_creators_info">This NFT doesn\'t have any creators\' information.</string>
+	<string name="login_with_phantom">Login with Phantom</string>
+	<string name="tinji">TINJI</string>
+	<string name="nft_event_card">McDonald\'s is nearby!</string>
+	<string name="nft_collection">Your Collectibles</string>
+	<string name="Spent">Spent</string>
+	<string name="month">this month</string>
+	<string name="benefit">benefit</string>
+	<string name="TransactionHistory">Transaction\nHistory</string>
+	<string name="ReviewHistory">Review\nHistory</string>
+	<string name="btn_review_write">If you write a review,\nwe\'ll give you<b>3 airdrops!</b></string>
+	<string name="photo">PHOTO</string>
+	<string name="review">REVIEW</string>
+	<string name="create_a_review">Reveiw a write</string>
+	<string name="save">Save</string>
+	<string name="payment">Select a payment method!</string>
+	<string name="subway2">69 Rue des Ayres,
+		33000\n<![CDATA[<b><font color=#0000FF>www.subway.com</font></b>]]></string>
+
+	<string name="subway">69 Rue des Ayres, 33000\n <![CDATA[<font color=\'#619AFF\'>www.subway.com</font>]]></string>
 </resources>

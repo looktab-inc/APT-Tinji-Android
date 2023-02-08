@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+		<variable
+			name="viewModel"
+			type="com.looktab.tinji.feature.MainViewModel" />
+	</data>
+
+	<androidx.appcompat.widget.LinearLayoutCompat
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/black"
+		android:clickable="true"
+		android:orientation="vertical">
+
+		<TextView
+			style="@style/Typography.Bold"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginEnd="20dp"
+			android:drawablePadding="4dp"
+			android:text="@string/nft_event_card"
+			android:textColor="@color/white"
+			android:textSize="20dp" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="105dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="12dp"
+			android:layout_marginEnd="20dp"
+			android:background="@drawable/cart_nft_event_left">
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<TextView
+			style="@style/Typography.Bold"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="28dp"
+			android:layout_marginEnd="20dp"
+			android:drawablePadding="4dp"
+			android:text="@string/nft_collection"
+			android:textColor="@color/white"
+			android:textSize="20dp" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/nftsRecyclerView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginStart="11dp"
+			android:layout_marginTop="18dp"
+			android:layout_marginEnd="11dp"
+			android:layout_marginBottom="80dp"
+			app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:spanCount="2"
+			tools:itemCount="10"
+			tools:listitem="@layout/item_nft_row" />
+	</androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

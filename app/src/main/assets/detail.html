@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="js/jquery-3.6.1.js"></script>
+
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#check1").off("click").on("click", function () {
+                if ($('input:checkbox[id="check1"]').is(':checked') == false) {
+                    if ($(".review_card_box").hasClass("hide")) {
+                        $(".review_card_box").removeClass("hide")
+                    }
+                    $(".review_tab").addClass("hide");
+                    $(".review_image_box").addClass("hide");
+                }
+
+                if ($('input:checkbox[id="check1"]').is(':checked') == true) {
+                    $(".review_card_box").addClass("hide")
+
+                    if ($(".review_tab").hasClass("hide")) {
+                        $(".review_tab").removeClass("hide")
+                    }
+
+                    if ($(".review_image_box").hasClass("hide")) {
+                        $(".review_image_box").removeClass("hide")
+                    }
+                }
+            })
+
+            $(".tab").click(function () {
+                var idx = $(this).index();
+                $(".tab").removeClass("tab_select");
+                $(".tab").eq(idx).addClass("tab_select");
+            })
+        });
+
+
+    </script>
+    <link href="css/detail.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="detail">
+    <div class="image_container">
+        <img class="background" src="./asset/detail/1.png"/>
+        <img class="pre_icon" src="./asset/detail/arrow_icon.png"/>
+    </div>
+    <div class="content_container">
+        <div class="content_title_container">
+
+            <div class="title_bottom">
+                <p class="title">Overflow</p>
+            </div>
+        </div>
+
+        <div class="content_detail_container">
+            <div class="content_detail"><img class="detail_icon" src="./asset/detail/icon1.png"/>
+                <p class="detail_text">69 Rue des Ayres, 33000 Bordeaux</p>
+            </div>
+            <div class="content_detail"><img class="detail_icon" src="./asset/detail/icon4.png"/>
+                <p class="detail_text">AM 10:00 - PM 9:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="review_container">
+        <div class="review_title">
+            <p>REVIEW</p>
+        </div>
+        <div class="review_check_box">
+            <input id="check1" type="checkbox" value="View only pictures"/>
+            <label for="check1"></label>
+            <p class="">View only pictures</p>
+        </div>
+
+        <div class="review_image_box hide">
+            <div class="review_image_row">
+                <img class="row_image" src="./asset/detail/review_card_image1.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image2.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image3.png"/>
+            </div>
+            <div class="review_image_row">
+                <img class="row_image" src="./asset/detail/review_card_image4.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image5.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image6.png"/>
+            </div>
+            <div class="review_image_row">
+                <img class="row_image" src="./asset/detail/review_card_image7.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image8.png"/>
+                <img class="row_image" src="./asset/detail/review_card_image9.png"/>
+            </div>
+        </div>
+
+        <div class="review_card_box">
+            <div class="review_card">
+                <div class="review_card_title">
+                    POI
+                </div>
+                <div class="review_card_image">
+                    <img class="review_image" src="./asset/detail/review_image1.png"/>
+                    <img class="review_image" src="./asset/detail/review_image2.png"/>
+                    <img class="review_image" src="./asset/detail/review_image3.png"/>
+                </div>
+                <div class="review_card_content">
+                    The cafe owner is so kind. The coffee is so good😘
+                </div>
+                <div class="review_card_date">
+                    2021.02.03
+                </div>
+            </div>
+        </div>
+
+        <div class="review_card_box">
+            <div class="review_card">
+                <div class="review_card_title">
+                    POI
+                </div>
+                <div class="review_card_content">
+                    The cafe owner is so kind. The coffee is so good😘
+                </div>
+                <div class="review_card_date">
+                    2021.02.03
+                </div>
+            </div>
+        </div>
+
+        <div class="review_card_box">
+            <div class="review_card">
+                <div class="review_card_title">
+                    JEJE
+                </div>
+                <div class="review_card_image">
+                    <img class="review_image" src="./asset/detail/review_image4.png"/>
+                    <img class="review_image" src="./asset/detail/review_image5.png"/>
+                </div>
+                <div class="review_card_content">
+                    The cafe owner is so kind. The coffee is so good😘
+                </div>
+                <div class="review_card_date">
+                    2021.02.03
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+		<variable
+			name="model"
+			type="com.looktab.tinji.feature.model.Nft" />
+	</data>
+
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/layoutBastItem"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="9dp"
+		android:layout_marginStart="9dp"
+		android:layout_marginBottom="18dp">
+
+		<LinearLayout
+			android:id="@+id/gridImg"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:background="@drawable/bg_nft_small_line"
+			android:padding="1dp"
+			app:layout_constraintDimensionRatio="1.5:2.0"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<com.looktab.tinji.customview.ProductRoundImageView24
+				android:id="@+id/nftImageView"
+				imageUrl300="@{model.image}"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:adjustViewBounds="true"
+				android:scaleType="centerCrop"
+				tools:srcCompat="@tools:sample/avatars" />
+		</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
